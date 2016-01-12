@@ -1,0 +1,568 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.noctisdrakon.plifmx.LoginFragment"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    >
+
+
+   <!-- <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="0dp"
+            android:layout_weight="50"
+            android:layout_height="wrap_content"
+            android:gravity="start">
+
+            <ImageButton
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:scaleType="centerInside"
+                android:id="@+id/arrow"
+                android:src="@drawable/arrow"
+                android:background="#00000000"
+                android:alpha="0.75"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="0dp"
+            android:layout_weight="50"
+            android:layout_height="wrap_content"
+            android:gravity="end">
+
+            <ImageButton
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:scaleType="centerInside"
+                android:id="@+id/plifgear"
+                android:src="@drawable/plifgear"
+                android:background="#00000000"
+                android:alpha="0.75"
+                />
+        </LinearLayout>
+
+    </LinearLayout>-->
+
+
+    <!--<ImageView
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:id="@+id/profilepic"
+        android:scaleType="centerInside"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/personaplif75"/>
+-->
+
+  <!--  <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+    <de.hdodenhof.circleimageview.CircleImageView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/profilepic"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/personaplifmini"
+        android:background="#0000ff"
+        />
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/esperaimagen"
+            android:layout_centerInParent="true"
+            android:visibility="gone"
+
+            />
+    </RelativeLayout> -->
+
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        >
+
+
+
+
+
+
+        <LinearLayout
+            android:id="@+id/contenedor_formulario"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginTop="75dp"
+            android:background="#ffffff">
+
+
+
+    <!-- Inicia la cámara -->
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:visibility="visible"
+        android:animateLayoutChanges="true"
+        android:id="@+id/animcont"
+        >
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:visibility="gone"
+        android:animateLayoutChanges="true"
+        android:id="@+id/cameracontainer"
+        >
+
+        <com.noctisdrakon.plifmx.AutoFitTextureView
+            android:id="@+id/texture"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            />
+
+        <ImageView
+            android:layout_width="150dp"
+            android:alpha="0.30"
+            android:scaleType="centerInside"
+            android:layout_height="50dp"
+            android:id="@+id/imageView7"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/logofull"/>
+
+
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp"
+            android:gravity="left">
+
+            <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Capturar"
+            android:id="@+id/capturar"
+            />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Voltear"
+                android:id="@+id/voltear"
+               />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cancelar"
+                android:id="@+id/cerrar"
+                />
+
+        </LinearLayout>
+
+
+
+    </RelativeLayout>
+</RelativeLayout>
+
+    <!-- Termina la cámara -->
+
+    <!-- Inician campos de nombre y apellido -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="75dp">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="0dp"
+            android:layout_weight="50"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:layout_marginRight="5dp">
+
+            <!-- Aqui empieza campo nombre -->
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/bordes_linearlayout"
+                android:padding="10dp">
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/imageView2"
+                    android:src="@drawable/personaplif"
+                    android:alpha="0.75"
+                    android:layout_marginRight="5dp"
+                     />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/nombre"
+                    android:hint="Nombre"
+                    android:layout_weight="1"
+                    android:textColor="#ffffff"
+                    android:textColorHint="#CAD1D5"
+                    android:background="#00000000"
+                    />
+            </LinearLayout>
+            <!-- Aqui termina campo nombre -->
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="0dp"
+            android:layout_weight="50"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:layout_marginLeft="5dp">
+
+            <!-- Aqui empieza campo apellido -->
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/bordes_linearlayout"
+                android:padding="10dp"
+
+                >
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/imageView3"
+                    android:src="@drawable/personaplif"
+                    android:alpha="0.75"
+                    android:layout_marginRight="5dp"
+                    />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/apellido"
+                    android:hint="Apellido"
+                    android:layout_weight="1"
+                    android:textColor="#ffffff"
+                    android:textColorHint="#CAD1D5"
+                    android:background="#00000000"
+                    />
+            </LinearLayout>
+            <!-- Aqui termina campo apellido -->
+        </LinearLayout>
+
+    </LinearLayout>
+    <!-- Terminan campos de nombre y apellido -->
+
+    <!-- Aqui empieza campo email -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/bordes_linearlayout"
+        android:padding="10dp"
+        android:layout_marginTop="10dp"
+
+        >
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="match_parent"
+            android:id="@+id/imageView4"
+            android:src="@drawable/mailplif"
+            android:alpha="0.75"
+            android:layout_marginRight="5dp"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/email"
+            android:inputType="textEmailAddress"
+            android:hint="Correo electrónico"
+            android:layout_weight="1"
+            android:textColor="#ffffff"
+            android:textColorHint="#CAD1D5"
+            android:background="#00000000"
+            />
+    </LinearLayout>
+    <!-- Aqui termina campo email -->
+
+    <!-- Aqui empieza campo contraseña -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/bordes_linearlayout"
+        android:padding="10dp"
+        android:layout_marginTop="10dp"
+
+        >
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="match_parent"
+            android:id="@+id/imageView5"
+            android:src="@drawable/lockplif"
+            android:alpha="0.75"
+            android:layout_marginRight="5dp"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/password"
+            android:inputType="textPassword"
+            android:hint="Contraseña"
+            android:layout_weight="1"
+            android:textColor="#ffffff"
+            android:textColorHint="#CAD1D5"
+            android:background="#00000000"
+            />
+    </LinearLayout>
+    <!-- Aqui termina campo contraseña -->
+
+    <!-- Aqui empieza campo repetir contraseña -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/bordes_linearlayout"
+        android:padding="10dp"
+        android:layout_marginTop="10dp"
+
+        >
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="match_parent"
+            android:id="@+id/imageView6"
+            android:src="@drawable/lockplif"
+            android:alpha="0.75"
+            android:layout_marginRight="5dp"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/retpassword"
+            android:inputType="textPassword"
+            android:hint="Repetir Contraseña"
+            android:layout_weight="1"
+            android:textColor="#ffffff"
+            android:textColorHint="#CAD1D5"
+            android:background="#00000000"
+            />
+    </LinearLayout>
+    <!-- Aqui termina campo repetir contraseña -->
+  <!--  <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Agregar"
+        android:id="@+id/textView"
+        android:textSize="20dp"
+        android:layout_gravity="center"
+        android:textColor="@color/plif_color_gris_bordes"/>
+
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+android:layout_marginTop="5dp">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/icoface"
+            android:src="@drawable/icoface"
+            />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="Facebook"
+            android:id="@+id/loginfb"
+            android:textSize="18dp"
+            android:textColor="@color/plif_color_gris_bordes"
+            android:background="@drawable/bordes_linearlayout"
+            android:layout_gravity="center_horizontal"
+            android:padding="10dp"/>
+    </RelativeLayout>
+    -->
+
+    ImageButton
+        android:layout_marginTop="10dp"
+        android:alpha="0.75"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:scaleType="centerInside"
+        android:background="#00000000"
+        android:id="@+id/plifok"
+        android:src="@drawable/logobola"
+        android:layout_gravity="center_horizontal" />
+
+    CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Términos y Condiciones"
+            android:id="@+id/tos"
+            android:textColor="#ffffff"
+            android:layout_gravity="center"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Registrarse"
+                android:id="@+id/login"
+                android:textSize="15dp"
+                android:textColor="#ffffff"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/boton_iniciar"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="O bien"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"
+                android:layout_gravity="center"
+                android:id="@+id/orso"
+                android:textColor="@color/plif_color_naranja"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:minHeight="1dp"
+                android:background="@color/plif_color_naranja"
+                >
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="15dp"
+                android:background="@color/azul_facebook">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_weight="80"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="Regístrate con Facebook"
+                        android:textColor="#ffffff"
+                        android:id="@+id/textView3" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_weight="20"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_gravity="right"
+                        android:layout_height="25dp"
+                        android:id="@+id/facelogin"
+                        android:src="@drawable/face"/>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/contenedor_foto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+
+
+        <RelativeLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+            <de.hdodenhof.circleimageview.CircleImageView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/profilepic"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@drawable/nopp"
+                app:civ_border_width="10dp"
+                app:civ_border_color="#FFFFFFFF"
+
+                />
+
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/esperaimagen"
+                android:layout_centerInParent="true"
+                android:visibility="gone"
+
+                />
+        </RelativeLayout>
+
+        </LinearLayout>
+
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>

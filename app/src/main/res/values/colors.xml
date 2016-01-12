@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#DA4D42</color>
+    <color name="colorPrimaryDark">#Db4e43</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <!-- aqui empiezan mis  colores -->
+    <color name="plif_color_gris_bordes">#9F9F9F</color>
+    <color name="plif_color_gris_placeholder">#CAD1D5</color>
+    <color name="plif_color_naranja">#DA4D42</color>
+    <color name="plif_gris_texto_irreelevante">#7E7E7E</color>
+    <color name="azul_facebook">#4A6EA9</color>
+</resources>
